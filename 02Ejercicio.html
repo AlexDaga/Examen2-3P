@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var nombres = [];
+        function insertar() {
+            let nombre = prompt("Ingrese Nombre: ")//(document.getElementById('nombre').value);
+            nombres.push(nombre);
+        }
+        function mostrar(){
+            nombres.forEach(nombre => {
+            console.log(nombre);
+            });
+        }
+        function eliminar(){
+            nombres.pop();
+        }
+        function actualizar(){
+            //var posicion
+            var posicion=prompt("Ingrese la posicion")
+            var quitar=nombres[posicion]
+            nombres[posicion]=(prompt("ingrese nuevo nombre: "));  
+        }
+
+        //var op;
+
+        do {
+            console.log("----Menu----");
+            console.log("1.-Crear")
+            console.log("2.-Mostrar")
+            console.log("3.-Eliminar")
+            console.log("4.-Actualizar")
+            console.log("0.-Salir")
+            var op=prompt("Ingrese su opcion")
+            opcion=parseInt(op)
+            switch (opcion) {
+                case 1:
+                insertar(); 
+                insertar();
+                insertar();
+                    break;
+                case 2:
+                mostrar();    
+                break;
+                case 3:
+                eliminar();
+                    break;
+                case 4:
+                actualizar();
+                    break;   
+            }
+
+        } while (op!=0);
+
+
+        
+
+        // insertar();
+        // insertar();
+        // insertar();
+        // mostrar();
+        // actualizar();
+        // mostrar();
+        // eliminar();
+        // mostrar();
+
+
+    </script>
+</body>
+
+</html>
